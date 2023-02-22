@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>tagsWindow</class>
+ <widget class="QMainWindow" name="tagsWindow">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>374</width>
+    <height>306</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>374</width>
+    <height>306</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>374</width>
+    <height>306</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>تگ ها  - تنظیمات</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../icons/tags.png</normaloff>../icons/tags.png</iconset>
+  </property>
+  <property name="layoutDirection">
+   <enum>Qt::RightToLeft</enum>
+  </property>
+  <property name="documentMode">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGroupBox" name="mainGroupBox">
+    <property name="geometry">
+     <rect>
+      <x>7</x>
+      <y>4</y>
+      <width>361</width>
+      <height>295</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>تنظیم تگ ها</string>
+    </property>
+    <widget class="QLabel" name="classLabel">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>30</y>
+       <width>47</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>دسته ها:</string>
+     </property>
+    </widget>
+    <widget class="ExtendedComboBox" name="classComboBox">
+     <property name="geometry">
+      <rect>
+       <x>18</x>
+       <y>27</y>
+       <width>271</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QGroupBox" name="settingGroupBox">
+     <property name="geometry">
+      <rect>
+       <x>9</x>
+       <y>97</y>
+       <width>341</width>
+       <height>190</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>تگ ها   (هر تگ در یک خط مجزا وارد شود)</string>
+     </property>
+     <widget class="QTextEdit" name="tagsTextEdit">
+      <property name="geometry">
+       <rect>
+        <x>12</x>
+        <y>20</y>
+        <width>314</width>
+        <height>161</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QPushButton" name="cancelPushButton">
+     <property name="geometry">
+      <rect>
+       <x>112</x>
+       <y>60</y>
+       <width>86</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>انصراف</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="savePushButton">
+     <property name="geometry">
+      <rect>
+       <x>203</x>
+       <y>60</y>
+       <width>86</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>ذخیره و خروج</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ExtendedComboBox</class>
+   <extends>QComboBox</extends>
+   <header>source/extended/ExtendedComboBox</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

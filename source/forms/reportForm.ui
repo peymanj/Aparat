@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>reportWindow</class>
+ <widget class="QMainWindow" name="reportWindow">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>374</width>
+    <height>110</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>374</width>
+    <height>110</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>374</width>
+    <height>110</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>گزارش گیری</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../icons/edit.png</normaloff>../icons/edit.png</iconset>
+  </property>
+  <property name="layoutDirection">
+   <enum>Qt::RightToLeft</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGroupBox" name="mainGroupBox">
+    <property name="geometry">
+     <rect>
+      <x>7</x>
+      <y>4</y>
+      <width>361</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>گزارش گیری</string>
+    </property>
+    <widget class="QLabel" name="startLabel">
+     <property name="geometry">
+      <rect>
+       <x>306</x>
+       <y>30</y>
+       <width>41</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>از تاریخ:</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="startDateLineEdit">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>31</y>
+       <width>100</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="inputMask">
+      <string>0000/00/00</string>
+     </property>
+     <property name="text">
+      <string>1400//</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="endDateLineEdit">
+     <property name="geometry">
+      <rect>
+       <x>34</x>
+       <y>31</y>
+       <width>100</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="inputMask">
+      <string>0000/00/00</string>
+     </property>
+     <property name="text">
+      <string>1400//</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="endLabel">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>30</y>
+       <width>51</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>تا تاریخ:</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="cancelPushButton">
+    <property name="geometry">
+     <rect>
+      <x>9</x>
+      <y>80</y>
+      <width>86</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>انصراف</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="savePushButton">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>80</y>
+      <width>86</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>تأیید</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

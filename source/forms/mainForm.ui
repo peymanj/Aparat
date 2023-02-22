@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>768</width>
+    <height>539</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>768</width>
+    <height>539</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>768</width>
+    <height>539</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>ربات آپلود ویدئو در آپارات</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../icons/aparat.png</normaloff>../icons/aparat.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="mainTab">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>218</x>
+      <y>3</y>
+      <width>548</width>
+      <height>511</height>
+     </rect>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::RightToLeft</enum>
+    </property>
+    <property name="tabShape">
+     <enum>QTabWidget::Rounded</enum>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="dashboard">
+     <attribute name="title">
+      <string>داشبورد</string>
+     </attribute>
+     <widget class="QLabel" name="profileLabel">
+      <property name="geometry">
+       <rect>
+        <x>447</x>
+        <y>10</y>
+        <width>91</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>انتخاب پروفایل:</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="profileComboBox">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>10</y>
+        <width>171</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="startPushButton">
+      <property name="geometry">
+       <rect>
+        <x>69</x>
+        <y>9</y>
+        <width>61</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>شروع آپلود</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="endPushButton">
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>9</y>
+        <width>61</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>اتمام آپلود</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="clearHistoryPushButton">
+      <property name="geometry">
+       <rect>
+        <x>2</x>
+        <y>457</y>
+        <width>88</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>پاک کردن تاریخچه</string>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="detailTableWidget">
+      <property name="geometry">
+       <rect>
+        <x>3</x>
+        <y>65</y>
+        <width>536</width>
+        <height>190</height>
+       </rect>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
+      </property>
+      <property name="dragDropOverwriteMode">
+       <bool>false</bool>
+      </property>
+      <property name="alternatingRowColors">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="detailLabel">
+      <property name="geometry">
+       <rect>
+        <x>412</x>
+        <y>45</y>
+        <width>126</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>زمان بندی پروفایل:</string>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="historyTableWidget">
+      <property name="geometry">
+       <rect>
+        <x>3</x>
+        <y>287</y>
+        <width>536</width>
+        <height>190</height>
+       </rect>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
+      </property>
+      <property name="dragDropOverwriteMode">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="historyLabel">
+      <property name="geometry">
+       <rect>
+        <x>412</x>
+        <y>267</y>
+        <width>126</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>گزارش:</string>
+      </property>
+     </widget>
+     <widget class="Line" name="line">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>40</y>
+        <width>542</width>
+        <height>3</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="dateLabel">
+      <property name="geometry">
+       <rect>
+        <x>232</x>
+        <y>10</y>
+        <width>50</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>تاریخ اجرا:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="dateLineEdit">
+      <property name="geometry">
+       <rect>
+        <x>135</x>
+        <y>10</y>
+        <width>95</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="inputMask">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <zorder>historyTableWidget</zorder>
+     <zorder>profileLabel</zorder>
+     <zorder>profileComboBox</zorder>
+     <zorder>startPushButton</zorder>
+     <zorder>endPushButton</zorder>
+     <zorder>clearHistoryPushButton</zorder>
+     <zorder>detailTableWidget</zorder>
+     <zorder>detailLabel</zorder>
+     <zorder>historyLabel</zorder>
+     <zorder>line</zorder>
+     <zorder>dateLabel</zorder>
+     <zorder>dateLineEdit</zorder>
+    </widget>
+    <widget class="QWidget" name="specVideos">
+     <attribute name="title">
+      <string>ویدئو ویژه</string>
+     </attribute>
+     <widget class="QLabel" name="specClassLabel">
+      <property name="geometry">
+       <rect>
+        <x>446</x>
+        <y>50</y>
+        <width>91</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>انتخاب دسته:</string>
+      </property>
+     </widget>
+     <widget class="ExtendedComboBox" name="specClassComboBox">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>50</y>
+        <width>171</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="filePathlineEdit">
+      <property name="geometry">
+       <rect>
+        <x>41</x>
+        <y>11</y>
+        <width>420</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="filePathLabel">
+      <property name="geometry">
+       <rect>
+        <x>486</x>
+        <y>10</y>
+        <width>51</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>آدرس فایل:</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="loadFilePushButton">
+      <property name="geometry">
+       <rect>
+        <x>9</x>
+        <y>10</y>
+        <width>23</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../icons/open_folder.png</normaloff>../icons/open_folder.png</iconset>
+      </property>
+     </widget>
+     <widget class="QLabel" name="startTimeLabel">
+      <property name="geometry">
+       <rect>
+        <x>121</x>
+        <y>50</y>
+        <width>91</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>زمان آپلود:</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="submitSequencePushButton">
+      <property name="geometry">
+       <rect>
+        <x>113</x>
+        <y>79</y>
+        <width>101</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>ثبت زمانبندی</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="deleteSequencePushButton">
+      <property name="geometry">
+       <rect>
+        <x>8</x>
+        <y>79</y>
+        <width>101</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>حذف زمان بندی</string>
+      </property>
+     </widget>
+     <widget class="QTimeEdit" name="uploadTimeEdit">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>50</y>
+        <width>131</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="dateTime">
+       <datetime>
+        <hour>0</hour>
+        <minute>0</minute>
+        <second>0</second>
+        <year>2000</year>
+        <month>1</month>
+        <day>1</day>
+       </datetime>
+      </property>
+      <property name="maximumTime">
+       <time>
+        <hour>23</hour>
+        <minute>59</minute>
+        <second>59</second>
+       </time>
+      </property>
+      <property name="currentSection">
+       <enum>QDateTimeEdit::HourSection</enum>
+      </property>
+      <property name="displayFormat">
+       <string>HH:mm</string>
+      </property>
+      <property name="timeSpec">
+       <enum>Qt::LocalTime</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="sequencesLabel">
+      <property name="geometry">
+       <rect>
+        <x>411</x>
+        <y>130</y>
+        <width>126</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>زمان بندی ها:</string>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="specSequenceTableWidget">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>155</y>
+        <width>522</width>
+        <height>321</height>
+       </rect>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
+      </property>
+      <property name="selectionBehavior">
+       <enum>QAbstractItemView::SelectRows</enum>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="specTagsPushButton">
+      <property name="geometry">
+       <rect>
+        <x>381</x>
+        <y>79</y>
+        <width>81</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>تگ</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="specDescriptionPushButton">
+      <property name="geometry">
+       <rect>
+        <x>289</x>
+        <y>79</y>
+        <width>81</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>کپشن</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="cancelEditSequencePushButton">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>8</x>
+        <y>109</y>
+        <width>101</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>انصراف</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="editSequencePushButton">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>113</x>
+        <y>109</y>
+        <width>101</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>ویرایش</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="logoLabel">
+    <property name="geometry">
+     <rect>
+      <x>8</x>
+      <y>2</y>
+      <width>211</width>
+      <height>515</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>768</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::RightToLeft</enum>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="layoutDirection">
+     <enum>Qt::RightToLeft</enum>
+    </property>
+    <property name="title">
+     <string>فایل</string>
+    </property>
+    <addaction name="actionProfiles"/>
+    <addaction name="actionClasses"/>
+    <addaction name="actionTags"/>
+    <addaction name="actionDescriptions"/>
+    <addaction name="actionTitles"/>
+    <addaction name="actionReport"/>
+    <addaction name="actionUsers"/>
+    <addaction name="actionSetting"/>
+    <addaction name="separator"/>
+    <addaction name="actionAboutUs"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <addaction name="menuFile"/>
+  </widget>
+  <action name="actionClasses">
+   <property name="text">
+    <string>مدیریت دسته ها</string>
+   </property>
+  </action>
+  <action name="actionTags">
+   <property name="text">
+    <string>مدیریت تگ ها</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>خروج</string>
+   </property>
+  </action>
+  <action name="actionProfiles">
+   <property name="text">
+    <string>پروفایل ها</string>
+   </property>
+  </action>
+  <action name="actionAboutUs">
+   <property name="text">
+    <string>درباره ما</string>
+   </property>
+  </action>
+  <action name="actionSetting">
+   <property name="text">
+    <string>تنظیمات</string>
+   </property>
+  </action>
+  <action name="actionDescriptions">
+   <property name="text">
+    <string>مدیریت کپشن ها</string>
+   </property>
+  </action>
+  <action name="actionReport">
+   <property name="text">
+    <string>گزارش</string>
+   </property>
+  </action>
+  <action name="actionUsers">
+   <property name="text">
+    <string>مدیریت کاربران</string>
+   </property>
+  </action>
+  <action name="actionTitles">
+   <property name="text">
+    <string>مدیریت عنوان ها</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ExtendedComboBox</class>
+   <extends>QComboBox</extends>
+   <header>source/extended/ExtendedComboBox</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>profileComboBox</tabstop>
+  <tabstop>startPushButton</tabstop>
+  <tabstop>endPushButton</tabstop>
+  <tabstop>clearHistoryPushButton</tabstop>
+  <tabstop>detailTableWidget</tabstop>
+  <tabstop>historyTableWidget</tabstop>
+  <tabstop>filePathlineEdit</tabstop>
+  <tabstop>loadFilePushButton</tabstop>
+  <tabstop>specClassComboBox</tabstop>
+  <tabstop>uploadTimeEdit</tabstop>
+  <tabstop>specTagsPushButton</tabstop>
+  <tabstop>specDescriptionPushButton</tabstop>
+  <tabstop>submitSequencePushButton</tabstop>
+  <tabstop>deleteSequencePushButton</tabstop>
+  <tabstop>editSequencePushButton</tabstop>
+  <tabstop>cancelEditSequencePushButton</tabstop>
+  <tabstop>specSequenceTableWidget</tabstop>
+  <tabstop>mainTab</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

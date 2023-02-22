@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>settingWindow</class>
+ <widget class="QMainWindow" name="settingWindow">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>374</width>
+    <height>361</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>374</width>
+    <height>361</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>374</width>
+    <height>361</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>تنظیمات</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../icons/setting.png</normaloff>../icons/setting.png</iconset>
+  </property>
+  <property name="layoutDirection">
+   <enum>Qt::RightToLeft</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGroupBox" name="mainGroupBox">
+    <property name="geometry">
+     <rect>
+      <x>7</x>
+      <y>4</y>
+      <width>361</width>
+      <height>321</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>تنظیمات</string>
+    </property>
+    <widget class="QLabel" name="dbPathLabel">
+     <property name="geometry">
+      <rect>
+       <x>266</x>
+       <y>30</y>
+       <width>81</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>آدرس دیتابیس:</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="browserViewCheckBox">
+     <property name="geometry">
+      <rect>
+       <x>106</x>
+       <y>180</y>
+       <width>241</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>صفحه مرورگر نمایش داده شود</string>
+     </property>
+     <property name="tristate">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="dbPathLineEdit">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>32</y>
+       <width>231</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="coverImageFolderLineEdit">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>76</y>
+       <width>231</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="comerImageForderLabel">
+     <property name="geometry">
+      <rect>
+       <x>256</x>
+       <y>73</y>
+       <width>91</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>آدرس پوشه عکس:</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="coverImageFormatLineEdit">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>108</y>
+       <width>231</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="readOnly">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="coverImageFormatLabel">
+     <property name="geometry">
+      <rect>
+       <x>255</x>
+       <y>105</y>
+       <width>91</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>فرمت عکس کاور:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="tagsLabel">
+     <property name="geometry">
+      <rect>
+       <x>256</x>
+       <y>138</y>
+       <width>91</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>تعداد تگ ارسالی:</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="tagsSpinBox">
+     <property name="geometry">
+      <rect>
+       <x>121</x>
+       <y>139</y>
+       <width>120</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="buttonSymbols">
+      <enum>QAbstractSpinBox::NoButtons</enum>
+     </property>
+     <property name="minimum">
+      <number>3</number>
+     </property>
+     <property name="maximum">
+      <number>30</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="waitMainLabel">
+     <property name="geometry">
+      <rect>
+       <x>166</x>
+       <y>216</y>
+       <width>181</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>زمان توقف بین آپلود های متوالی (ثانیه):</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="waitMinLabel">
+     <property name="geometry">
+      <rect>
+       <x>307</x>
+       <y>241</y>
+       <width>41</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>حداقل:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="waitMaxLabel">
+     <property name="geometry">
+      <rect>
+       <x>193</x>
+       <y>241</y>
+       <width>41</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>حداکثر:</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="waitMinSpinBox">
+     <property name="geometry">
+      <rect>
+       <x>259</x>
+       <y>241</y>
+       <width>51</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="buttonSymbols">
+      <enum>QAbstractSpinBox::NoButtons</enum>
+     </property>
+     <property name="minimum">
+      <number>2</number>
+     </property>
+     <property name="maximum">
+      <number>2000</number>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="waitMaxSpinBox">
+     <property name="geometry">
+      <rect>
+       <x>138</x>
+       <y>241</y>
+       <width>51</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="buttonSymbols">
+      <enum>QAbstractSpinBox::NoButtons</enum>
+     </property>
+     <property name="minimum">
+      <number>2</number>
+     </property>
+     <property name="maximum">
+      <number>2000</number>
+     </property>
+    </widget>
+    <widget class="Line" name="line">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>64</y>
+       <width>348</width>
+       <height>2</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="Line" name="line_2">
+     <property name="geometry">
+      <rect>
+       <x>6</x>
+       <y>169</y>
+       <width>348</width>
+       <height>2</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="multiInstanceCheckBox">
+     <property name="geometry">
+      <rect>
+       <x>105</x>
+       <y>286</y>
+       <width>241</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>اجرای همزمان چند ربات</string>
+     </property>
+     <property name="tristate">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="Line" name="line_3">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>275</y>
+       <width>348</width>
+       <height>2</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="cancelPushButton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>333</y>
+      <width>86</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>انصراف</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="savePushButton">
+    <property name="geometry">
+     <rect>
+      <x>101</x>
+      <y>333</y>
+      <width>86</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ذخیره</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
